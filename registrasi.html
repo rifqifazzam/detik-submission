@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta name="detik-travel" content="">
+
+
+    <style>
+        main {
+            background-image: url('/images/bg.png');
+            background-size: cover;
+            background-position: center;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            color: white;
+
+        }
+
+        .registrasi-page .container{
+            margin-top:40%;
+        }
+
+        .registrasi-page{
+            margin-bottom: 10%;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            
+            background-size: cover;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            margin-bottom: 10px;
+        }
+
+        .form-container .upload-box {
+            border: 2px dashed #0d6efd;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-container .btn-primary {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/images/logo.png" alt="Logo" class="h-auto">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tentang Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item" id="registrasi">
+                            <a class="nav-link btn btn-warning text-white ms-3" href="/registrasi.html">Registrasi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+  
+        <section class="registrasi-page">
+            <div class="container">
+                <div class="title">
+                    <h2 class="text-center text-muted ">Registrasi</h2>
+                    <p class="text-center text-muted">Lengkapi data diri kamu dengan benar</p>
+                </div>
+
+                <div class="form-container">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nama lengkap<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Nomor Telepon<span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Isi hanya angka" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Alasan mengikuti program "Explore Thailand by Detiktravel"<span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="reason" rows="3" placeholder="Tuliskan alasan kamu" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Upload foto profil<span class="text-danger">*</span></label>
+                            <div class="upload-box">
+                                <input type="file" class="form-control" id="profilePhoto" required>
+                                <p>Format file: .png, .jpg, .jpeg</p>
+                                <p>Maksimal ukuran file: 1MB</p>
+                                <p>Disarankan foto mencakup 50% badan</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="instagram" class="form-label">Link Instagram</label>
+                            <input type="url" class="form-control" id="instagram" placeholder="https://www.instagram.com/yourusername">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">Dengan menekan tombol "Daftar", Saya menyetujui <a href="#" class="text-primary">syarat dan ketentuan</a> yang berlaku</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </form>
+                </div>
+            </div> 
+            
+        </section>
+
+        
+
+ 
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 test">
+                        <div class="footer-logo">
+                            <img src="/images/Asset 1 1.png" alt="Logo" class="logo-img">
+                            <!-- Placeholder for the logo -->
+                        </div>
+
+                        <p class="d-flex flex-column justify-content-end align-items-center">Bergabunglah dalam
+                            "Explore Thailand bersama Detiktravel"! Kompetisi ini terbuka bagi
+                            pembaca Detiktravel yang ingin menikmati perjalanan ke Thailand. Kunjungi destinasi
+                            menakjubkan seperti pantai Pak Bia Island dan destinasi lain di Phuket, Thailand. Jadi
+                            bagian dari perjalanan kami dan menangkan hadiah jalan-jalan yang tak terlupakan!</p>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column justify-content-end align-items-center">
+                        <p class="mb-2 text-center">Connect With Us</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon"><img src="/images/facebook-icon.png" alt="Facebook"
+                                    class="social-img"></a>
+                            <a href="#" class="social-icon"><img src="/images/instagram-icon.png" alt="Instagram"
+                                    class="social-img"></a>
+                            <a href="#" class="social-icon"><img src="/images/twitter-icon.png" alt="Twitter"
+                                    class="social-img"></a>
+                            <a href="#" class="social-icon"><img src="/images/linkedin-icon.png" alt="LinkedIn"
+                                    class="social-img"></a>
+                            <a href="#" class="social-icon"><img src="/images/youtube-icon.png" alt="YouTube"
+                                    class="social-img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-left">
+            <p>Copyright &copy; 2023 detikcom. All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
